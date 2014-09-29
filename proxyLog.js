@@ -1,3 +1,4 @@
+/* jshint asi:true, expr:true*/
 function argNames(fn){
 	fText = fn+''
 	paren = {
@@ -22,4 +23,6 @@ function proxyLog(message,fn){
 	}
 }
 
-module.exports = proxyLog;
+if(typeof require !== 'undefined'){
+		module.exports = proxyLog;
+}
