@@ -1,0 +1,19 @@
+{
+  "name": "proxyLog",
+  "version": "0.0.0",
+  "description": "Log without editing your functions",
+  "main": "proxyLog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JAForbes",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JAForbes/proxyLog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JAForbes/proxyLog/issues"
+  },
+  "homepage": "https://github.com/JAForbes/proxyLog"
+}
