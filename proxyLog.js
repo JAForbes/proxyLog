@@ -14,12 +14,17 @@ function proxyLog(message,fn){
 	var names = argNames(fn)
 	return function(){
 		var logObj = {};
+		var logArgs = message && [message] || []
 		for(var i =0; i< arguments.length; i++){
-			logObj[names[i]] = arguments[i];
+			logArgs.push(names[i]+':'+arguments[i])
 		}
-		message && console.log(message,logObj) || console.log(JSON.stringify(logObj,null,2))
 
-		return fn.apply(null,arguments);
+		var output = fn.apply(null,arguments);
+
+		logArgs.push('=>',output)
+		console.log.apply(console,logArgs)
+
+		return output
 	}
 }
 
