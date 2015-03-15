@@ -17,7 +17,7 @@ function proxyLog(message,fn){
 		for(var i =0; i< arguments.length; i++){
 			logObj[names[i]] = arguments[i];
 		}
-		message && console.log(message,logObj) || console.log(JSON.stringify(logObj),null,2)
+		message && console.log(message,logObj) || console.log(JSON.stringify(logObj,null,2))
 
 		return fn.apply(null,arguments);
 	}
