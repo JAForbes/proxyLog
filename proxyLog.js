@@ -13,7 +13,6 @@ function argNames(fn){
 function proxyLog(message,fn){
 	var names = argNames(fn)
 	return function(){
-		var logObj = {};
 		var logArgs = message && [message] || []
 		for(var i =0; i< arguments.length; i++){
 			logArgs.push(names[i]+':'+arguments[i])
